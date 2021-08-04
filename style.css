@@ -1,0 +1,273 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(248, 248, 248);
+  margin: 0;
+}
+
+.mainPage {
+  display: flex;
+  padding: 2rem;
+  letter-spacing: 1.2px;
+}
+
+.leftPage {
+  max-width: 25%;
+  margin: 1rem;
+  margin-right: 10rem !important;
+}
+
+.menuLogo {
+  display: none;
+}
+
+.shoppingCartLogo {
+  display: none;
+}
+
+.leftPage h1 {
+  font-size: 3rem;
+  font-family: "STIX Two Text", serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 2rem 0;
+  font-size: 1.2em;
+}
+
+.title a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.button {
+  font-size: 1.5em;
+  border: none;
+  background-color: #fc0341;
+  color: aliceblue;
+  border-radius: 2rem;
+  width: 35%;
+  padding: 10px;
+  margin: 1rem;
+}
+
+.rightPage {
+  max-width: 75%;
+  margin-left: 2rem !important;
+}
+
+.introduction {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.introLeft {
+  flex: 0.7;
+}
+
+.introLeft h1 {
+  font-size: 5rem;
+  font-family: "STIX Two Text", serif;
+}
+
+.introRight {
+  flex: 0.3;
+  margin: 0.5rem;
+}
+
+.introRight p {
+  font-size: 1rem;
+  width: 60%;
+  margin-top: 4rem;
+}
+
+.introRight hr {
+  border: 1px solid red;
+  width: 3rem;
+  float: left;
+}
+
+.mainPage .rightPage .foodItems {
+  display: flex;
+  padding: 20px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.mainPage .rightPage .foodItems .card {
+  display: flex;
+  flex-direction: column;
+  background-color: white !important;
+  min-width: 150px;
+  height: 250px;
+  margin: 10px;
+  line-height: 200px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 2rem;
+  box-shadow: 10px 10px 10px 10px #edeae5;
+}
+
+.foodItems::-webkit-scrollbar {
+  display: none;
+}
+
+.foodItems .card .card-img {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.foodItems .card .card-img a img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.foodItems .card .card-img a img:hover {
+  transform: scale(1.2);
+}
+
+.card-title {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-title h1 {
+  font-size: 1rem !important;
+  object-fit: contain;
+  margin-top: -35px;
+}
+
+.summary {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .mainPage {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 1rem;
+  }
+
+  .leftPage {
+    display: inline-flex;
+    max-width: 100% !important;
+    justify-content: space-between;
+    margin: 0 !important;
+  }
+
+  .menuLogo {
+    display: block;
+    margin: 15px 0 !important;
+  }
+
+  .menuLogo img {
+    width: 30px;
+  }
+
+  .shoppingCartLogo {
+    display: block;
+    margin: 15px 0 !important;
+  }
+
+  .shoppingCartLogo img {
+    width: 30px;
+  }
+
+  .leftPage h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 15px 0 !important;
+  }
+
+  .rightPage {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .navbar {
+    display: none !important;
+  }
+
+  .introRight p {
+    bottom: 0 !important;
+  }
+
+  .introduction {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .introLeft h1 {
+    margin: 1rem !important;
+    font-size: 2.2rem;
+  }
+
+  .introRight p {
+    display: none;
+  }
+
+  .introRight hr {
+    display: none;
+  }
+
+  .foodItems {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: scroll !important;
+    max-height: 480px !important;
+  }
+
+  .foodItems .card {
+    min-width: 20px !important;
+    height: 200px !important;
+    padding: 0.6rem !important;
+  }
+
+  .foodItems .card .card-img {
+    height: 150px !important;
+  }
+
+  .card-title {
+    overflow: visible !important;
+  }
+
+  .card-title h1 {
+    font-size: 1rem !important;
+    height: 30px;
+    margin-top: -5rem;
+  }
+
+  .summary {
+    margin-top: 1.85rem !important;
+    display: block !important;
+  }
+
+  .summary p {
+    font-size: 1rem;
+  }
+
+  .summary hr {
+    border: 1px solid red;
+    width: 5rem;
+    float: left;
+  }
+}
